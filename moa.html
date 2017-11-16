@@ -1,0 +1,106 @@
+
+<html>
+<head>
+	<meta chaset="utf-8" />
+	<title>yrcc OA APP</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+	<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+
+	<style>
+
+		body,ul,li,dt,dol,dd,h1,h2,h3,h4,h5,h6,h7,em{margin:0px;padding:0px;list-style:none;}
+		body{font-family:Helvetica,\u5fae\u8f6f\u96c5\u9ed1,\u9ed1\u4f53,Arial,Tahoma;}
+		em{font-style:}
+		a img{border:none 0;}
+
+		.top{height:40px;background:#f8f8f8;}
+		a,a:active{text-decoration:none;color:#333;}
+		.index_body h1,.index_body h2{font-size:17px;text-align:center;padding:10px 0;}
+		.index_body h1 a,.index_body h2 a,.index_body h2 a:active{color:#9d2225;}
+		.index_body{background:#f8f8f8;font-size:17px;}
+		.top .logo{float:left;}
+		.top .linkApp{float:right;padding:0 15px;font-size:12px;margin-top:15px;position:relative;line-height:18px;}
+		.top .linkApp img{position:absolute;left:0px;top:0px;}
+		.mainHeader{background:url(images/bg_header.jpg) no-repeat center top #12b7f5;border-top:1px solid #12b7f5;border-bottom:1px solid #12b7f5;clear:both;}
+		.footer{clear:both;}
+		.mainHeader .inner{border-top:1px solid #12b7f5;border-bottom:1px solid #12b7f5;height:52px;} 
+		.footer .inner{border-top:1px solid #8A8A8A;height:52px;} 
+		.innerContent{width:100%;text-align:center;float:left;line-height:50px;color:#fff;font-size:14pt;}
+		.innerContent1{width:100%;text-align:center;float:left;line-height:50px;color:#fff;font-size:14pt;}
+		.innerContentfoot{width:100%;text-align:center;float:left;line-height:15px;color:#fff;}
+		.mainHeader a,.footer .inner a,.footer .inner a:active{color:#fff;display:block;line-height:26px;}
+		.mainHeader a.hover,.mainHeader a:hover,.footer .inner a:hover,.footer .inner a.hover{background:#000;opacity:0.5;border-radius:3px;color:#fff;}
+		.mainHeader a:active,.footer .inner a:active{color:#fff;}
+		.mainHeader_6 li{width: 16.5%;}
+		.mainHeader ul{clear:both;}
+		.wrap_ul .item{width:100%;}
+		.footer{text-align:center;}
+		.footer li{display:inline-block;margin:0 3px;color:#fff;line-height:26px;}
+		.footer li a{display:block;padding:0 5px;}
+		.footer li.up a,.footer li.up a:hover,.footer li.up a.hover{width:32px;text-indent:-999999px;}
+	</style>
+
+</head>
+
+<body>     
+   <header class="mainHeader">
+		<div class="inner">
+			<div class="innerContent1">云南林业移动办公系统</div>		
+		</div>
+    </header>
+	<center>
+		<div>
+			<dl>
+				<div style="margin-top:8%;"><img src="https://zff920123.github.io/ynlamoa/iphone.jpg"/></div>
+				<dt></dt>
+				<dd>
+					<a href="itms-services://?action=download-manifest&url=https://zff920123.github.io/ynlamoa/moa.plist" style="display:block;width:170px;height:40px;" target="_blank">
+						<div style="width:170px;height:40px;background:url(https://zff920123.github.io/ynlamoa/download.png) no-repeat;color:white;line-height:32pt;font-family:黑体;font-size:16pt;">
+							<font style="margin-left:15px;">在线安装</font>
+						</div>
+					</a>
+				</dd>
+			</dl>
+		</div>
+	</center>
+<script type="text/javascript">
+window.onload = function(){
+    if(isWeiXin()){
+    	
+    	alert("提示：从微信扫描用户请点右上角菜单, 切换到在浏览器中打开后安装！");
+
+    }
+}
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.indexOf('micromessenger')>0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+var browser = {
+		versions: function() {
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {//移动终端浏览器版本信息 
+			trident: u.indexOf('Trident') > -1, //IE内核
+			presto: u.indexOf('Presto') > -1, //opera内核
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+			iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+		};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+</script>
+
+</body>
+</html>
+		
